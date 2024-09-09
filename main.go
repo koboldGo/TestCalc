@@ -11,7 +11,7 @@ import (
 )
 
 var cases = [19]int{100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
-var arabicRegex = regexp.MustCompile("\\d")
+var arabicRegex = regexp.MustCompile("[1-9]|10")
 var romeRegex = regexp.MustCompile("[IVXivx]")
 var operationRegex = regexp.MustCompile("[/+\\-*]")
 
@@ -35,7 +35,7 @@ func validate(input string) {
 	} else if romeRegex.Match([]byte(operands[0])) && romeRegex.Match([]byte(operands[1])) {
 		calcRome(input, operands)
 	} else {
-		panic("Используются одновременно разные системы счисления")
+		panic("Выражение не соответствует требованиям")
 	}
 }
 
