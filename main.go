@@ -11,7 +11,7 @@ import (
 )
 
 var cases = [19]int{100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
-var arabicRegex = regexp.MustCompile("[1-9]|10")
+var arabicRegex = regexp.MustCompile("^(10|[0-9])?$")
 var romeRegex = regexp.MustCompile("[IVXivx]")
 var operationRegex = regexp.MustCompile("[/+\\-*]")
 
