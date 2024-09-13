@@ -26,6 +26,7 @@ func main() {
 
 func validate(input string) {
 	input = strings.TrimSpace(input)
+	input = strings.ReplaceAll(input, " ", "")
 	operands := operationRegex.Split(input, -1)
 	if len(operands) != 2 {
 		panic("Формат математической операции не удовлетворяет заданию — два операнда и один оператор (+, -, /, *)")
