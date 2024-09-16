@@ -117,7 +117,7 @@ func convertToArabic(input string) int {
 }
 
 func convertToRome(input int) {
-	if input < 0 {
+	if input <= 0 {
 		panic("Результатом работы калькулятора с римскими числами могут быть только положительные числа")
 	}
 	var buffer bytes.Buffer
